@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+    <div class="form-group">
+        <label for="NameProduct">NameProduct:</label>
+        {{ form_widget(form.NameProduct,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Task name'
+            }
+        }) }}
+        <div class="invalid-feedback">
+            {{ form_errors(form.NameProduct) }}
+        </div>
+    </div>
+   <div class="form-group">
+        <label for="Quantity">Quantity:</label>
+        {{ form_widget(form.Quantity,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Task name'
+            }
+        }) }}
+        <div class="invalid-feedback">
+            {{ form_errors(form.Quantity)}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Information">Information:</label>
+        {{ form_widget(form.Information,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Task name'
+            }
+        }) }}
+        <div class="invalid-feedback">
+            {{ form_errors(form.Information) }}
+        </div>
+    </div>
+        <div class="form-group">
+        <label for="Price">Price:</label>
+        {{ form_widget(form.Price,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Task name'
+            }
+        }) }}
+        <div class="invalid-feedback">
+            {{ form_errors(form.Price) }}
+        </div>
+    </div>
+        <div class="form-group">
+        <label for="Type">Type:</label>
+        {{ form_widget(form.Type,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Task name'
+            }
+        }) }}
+        <div class="invalid-feedback">
+            {{ form_errors(form.Type) }}
+        </div>
+    </div>
+    <input type="submit" name="products_create" value="Create" class="btn btn-primary"/>
+    {{ form_end(form) }}
+{% endblock %}
