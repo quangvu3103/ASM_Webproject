@@ -9,27 +9,27 @@
                 <th>Information</th>
                <th>Price</th>
                 <th>Quantity</th>
-                <th>Type</th>
-
+                <th>ProductType</th>
             </tr>
             </thead>
             <tbody>
+            <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Cake Store Product</h1>
+            </div>
+            </section>
+            <a  href="{{ path('product_create')}} " class='btn btn-success'>Add Product</a>
             {% for Product in Products %}
                 <tr>
                     <td>{{ Product.NameProduct }}</td>
-
                     <td>{{ Product.Information }}</td>
-
                     <td>{{ Product.Price }}</td>
                     <td>{{ Product.Quantity }}</td>
-                    <td>{{ Product.Type }}</td>
-
+                    <td>{{ Product.typeProduct }}</td>
                     <td>
                         <a href="{{ path('product_details', {'id': Product.id}) }} " class='btn btn-success'>View</a>
                         <a href="{{ path('product_delete', {'id': Product.id}) }}" class='btn btn-default'>Delete</a>
                         <a href="{{ path('product_edit', {'id': Product.id}) }}" class='btn btn-danger'>Edit</a> 
-                
-
                     </td>
                 </tr>
             {% endfor %}

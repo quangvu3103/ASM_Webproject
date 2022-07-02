@@ -11,7 +11,16 @@
             }
         }) }}
     </div>
-   
+   <div class="form-group">
+        <label for="typeProduct ">type  Product:</label>
+        {{ form_widget(form.typeProduct,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Task name'
+            }
+        }) }}
+
+    </div>
     <input type="submit" name="products_edit" value="Edit" class="btn btn-primary"/>
     {{ form_end(form) }}
 {% endblock %}

@@ -60,7 +60,7 @@ public function deleteAction($id)
     
     $this->addFlash(
         'error',
-        'Todo deleted'
+        'Deleted'
     );
     
     return $this->redirectToRoute('products_user');
@@ -76,7 +76,7 @@ public function createAction(Request $request)
     if ($this->saveChanges($form, $request, $TypeProduct)) {
         $this->addFlash(
             'notice',
-            'Todo Added'
+            'Added'
         );
         
         return $this->redirectToRoute('products_user');
@@ -115,7 +115,7 @@ public function editAction($id, Request $request)
     if ($this->saveChanges($form, $request, $TypeProduct)) {
         $this->addFlash(
             'notice',
-            'Todo Edited'
+            'Edited'
         );
         return $this->redirectToRoute('products_user');
     }

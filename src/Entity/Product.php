@@ -37,10 +37,12 @@ class Product
      */
     private $Price;
 
+
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity=TypeProduct::class)
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $Type;
+    private $typeProduct;
 
     public function getId(): ?int
     {
@@ -95,14 +97,15 @@ class Product
         return $this;
     }
 
-    public function getType(): ?string
+
+    public function getTypeProduct(): ?TypeProduct
     {
-        return $this->Type;
+        return $this->typeProduct;
     }
 
-    public function setType(string $Type): self
+    public function setTypeProduct(?TypeProduct $typeProduct): self
     {
-        $this->Type = $Type;
+        $this->typeProduct = $typeProduct;
 
         return $this;
     }

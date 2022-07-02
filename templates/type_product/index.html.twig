@@ -11,17 +11,20 @@
             </tr>
             </thead>
             <tbody>
+            <section class="jumbotron text-center">
+            <div class="container" >
+            <h1 class="jumbotron-heading">Type Product</h1>
+            </div>
+            </section>
+            <a  href="{{ path('typeproducts_create')}} " class ='btn btn-success'>Add Type</a>
             {% for TypeProduct in TypeProducts %}
                 <tr>
                     <th scope="row">{{ TypeProduct.id }}</th>
                     <td>{{ TypeProduct.name }}</td>
                     <td>
-                        {#<a href="{{ path('todo_details', {'id': todo.id}) }} " class='btn btn-success'>View</a>#}
-                        {#<a href="{{ path('todo_edit', {'id': todo.id}) }}" class='btn btn-default'>Edit</a>#}
-                        {#<a href="{{ path('todo_delete', {'id': todo.id}) }}" class='btn btn-danger'>Delete</a>#}
-                         <a href="{{ path('typeproducts_details', {'id': TypeProduct.id}) }} " class='btn btn-success'>View</a> (add this line)
-                         <a href="{{ path('typeproducts_edit', {'id': TypeProduct.id}) }} " class='btn btn-success'>Edit</a> (add this line)
-                         <a href="{{ path('typeproducts_delete', {'id': TypeProduct.id}) }} " class='btn btn-success'>Delete</a> (add this line)
+                         <a href="{{ path('typeproducts_details', {'id': TypeProduct.id}) }} " class='btn btn-success'>View</a> 
+                         <a href="{{ path('typeproducts_edit', {'id': TypeProduct.id}) }} " class='btn btn-success'>Edit</a> 
+                         <a href="{{ path('typeproducts_delete', {'id': TypeProduct.id}) }} " class='btn btn-success'>Delete</a> 
 
                     </td>
                 </tr>
